@@ -1,16 +1,11 @@
 import React from "react";
-const Input = ({ name, label, value, error, onChange }) => {
+// here i am suig rest operator to combine type, value, onChnage which will combine all these props altogether
+const Input = ({ name, label, error, ...rest }) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
-      <input
-        value={value}
-        onChange={onChange}
-        name={name}
-        id={name}
-        type="text"
-        className="form-control"
-      />
+      {/* now i will use spread operator to call the props we have put in the rest */}
+      <input {...rest} name={name} id={name} className="form-control" />
       {error && <div className="alert alert-danger">{error}</div>}
     </div>
   );
