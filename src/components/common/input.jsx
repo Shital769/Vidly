@@ -1,5 +1,5 @@
 import React from "react";
-// here i am suig rest operator to combine type, value, onChnage which will combine all these props altogether
+// here i am using rest operator to combine type, value, onChnage which will combine all these props altogether
 const Input = ({ name, label, error, ...rest }) => {
   return (
     <div className="form-group">
