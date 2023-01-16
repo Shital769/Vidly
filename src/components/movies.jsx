@@ -8,7 +8,7 @@ import { getMovies, deleteMovie } from "../services/movieService";
 import { getGenres } from "../services/genreService";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
-import SearchBox from "./common/searchBox";
+import SearchBox from "./searchBox";
 
 class Movies extends Component {
   state = {
